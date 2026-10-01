@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZioShu web</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+        color: #efeff1;
+        background-color: #0e0e10;
+      }
+
+      .header {
+        position: relative;
+        background-color: #18181b;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 8px 0;
+        font-size: 1.5em;
+      }
+
+      .topnav {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+
+      .topnav a {
+        color: #efeff1;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+
+      .topnav a:hover {
+        color: #bf94ff;
+      }
+
+      .cards {
+        display: flex;
+        gap: 20px;
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .card {
+        flex: 1;
+        background-color: #26262c;
+        color: #efeff1;
+        text-decoration: none;
+        text-align: center;
+        padding: 150px 20px;
+        border: 1px solid #3a3a42;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s,
+          border-color 0.2s;
+      }
+
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(145, 70, 255, 0.35);
+        border-color: #9146ff;
+        color: #bf94ff;
+      }
+
+      .card h2 {
+        margin: 0 0 8px;
+      }
+
+      .card p {
+        margin: 0;
+        color: #adadb8;
+      }
+
+      .footer {
+        background-color: #18181b;
+        text-align: center;
+        padding: 10px;
+        margin-top: 7px;
+      }
+
+      @media only screen and (max-width: 800px) {
+        .cards {
+          flex-direction: column;
+        }
+
+        .topnav {
+          position: static;
+          transform: none;
+          padding-bottom: 8px;
+        }
+
+        .topnav a {
+          margin: 0 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>其餘同學連結</h1>
+      <div class="topnav">
+        <a href="index.html">首頁</a>
+        <a href="chart.html">圖表</a>
+        <a href="link.html">其餘同學連結</a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <a
+        class="card"
+        href="https://lck0408.github.io/web/index.html"
+        target="_blank"
+      >
+        <h2>同學 A</h2>
+        <p>點擊前往</p>
+      </a>
+
+      <a class="card" href="https://同學B的網址" target="_blank">
+        <h2>同學 B</h2>
+        <p>點擊前往</p>
+      </a>
+
+      <a class="card" href="https://同學C的網址" target="_blank">
+        <h2>同學 C</h2>
+        <p>點擊前往</p>
+      </a>
+    </div>
+
+    <div class="footer">© copyright 41543133 許秉焱</div>
+  </body>
+</html>

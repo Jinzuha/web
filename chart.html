@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZioShu website</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+        color: #efeff1;
+        background-color: #0e0e10;
+      }
+
+      .header {
+        position: relative;
+        background-color: #18181b;
+        padding: 5px;
+        text-align: center;
+      }
+
+      .header h1 {
+        margin: 8px 0;
+        font-size: 1.5em;
+      }
+
+      .topnav {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+      }
+
+      .topnav a {
+        color: #efeff1;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+
+      .topnav a:hover {
+        color: #bf94ff;
+      }
+
+      #myPlot {
+        width: 100%;
+        max-width: 700px;
+        margin: 20px auto;
+      }
+
+      .footer {
+        background-color: #18181b;
+        text-align: center;
+        padding: 10px;
+        margin-top: 7px;
+      }
+
+      @media only screen and (max-width: 620px) {
+        .topnav {
+          position: static;
+          transform: none;
+          padding-bottom: 8px;
+        }
+        .topnav a {
+          margin: 0 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>圖表</h1>
+      <div class="topnav">
+        <a href="index.html">首頁</a>
+        <a href="chart.html">圖表 </a>
+        <a href="link.html">其餘同學連結</a>
+      </div>
+    </div>
+
+    <div id="myPlot"></div>
+
+    <script>
+      const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+      const yArray = [55, 49, 44, 24, 15];
+
+      const layout = {
+        title: { text: "World Wide Wine Production", x: 0.5 },
+        paper_bgcolor: "#18181b",
+        font: { color: "#efeff1" },
+      };
+
+      const data = [
+        {
+          labels: xArray,
+          values: yArray,
+          hole: 0.4,
+          type: "pie",
+          textfont: { color: "white" },
+          marker: {
+            colors: ["#9146ff", "#bf94ff", "#eb0400", "#00c8af", "#ffca29"],
+          },
+        },
+      ];
+
+      Plotly.newPlot("myPlot", data, layout);
+    </script>
+
+    <div class="footer">© copyright 41543133 許秉焱</div>
+  </body>
+</html>
